@@ -1,27 +1,21 @@
-/* ==========================================================
-   EDIT THIS FILE ONLY. Everything on the site comes from here.
-   Photos: put them in the /images folder and list the file
-   names below. Missing photos show a soft placeholder.
-   ========================================================== */
-
 const SITE = {
   pageTitle: "test & test",
 
-  // The two names shown in the hero
+
   partner1: "Таны нэр",
   partner2: "түүний нэр",
 
   // Short line under the names
   tagline: "Чамтай өнгөрүүлэх хором бүр миний хувьд хамгийн үнэ цэнтэй нь. Бидний хамтдаа туулсан цаг хугацаа",
 
-  // When your story started (YYYY-MM-DDTHH:MM:SS). The live counter uses this.
+
   startDate: "2023-02-14T18:00:00",
 
-  // Optional background music. Put an .mp3 in /images or /music and write its path.
-  // Leave as "" for no music.
+
+
   music: "romantic-song.mp3",
 
-  // ---------- OUR STORY (add or remove entries freely) ----------
+
   storyTitle: "Бидний учралын түүх",
   story: [
     {
@@ -55,7 +49,7 @@ const SITE = {
     { photo: "love6.jpg", caption: "Зөвхөн бид хоёр" },
   ],
 
-  // ---------- REASONS I LOVE YOU ----------
+ 
   reasonsTitle: "Би яагаад зөвхөн чамд л сэтгэлээ өгсөн бэ?",
   reasonsButton: "Дахиад ч байгаа 😉",
   reasons: [
@@ -67,7 +61,7 @@ const SITE = {
     "Хоёулахнаа байхдаа ярьдаг тэр сонин хөгжилтэй ярианууд зөвхөн биднийх байдаг.",
   ],
 
-  // ---------- LOVE LETTER ----------
+
   letterTitle: "Чамдаа зориулсан захидал",
   letterButton: "Захидлыг нээх",
   letter: {
