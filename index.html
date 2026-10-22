@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Karla:wght@400;500&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <header class="hero" id="top">
+    <h1 class="names">
+      <span id="p1"></span>
+      <span class="amp" aria-hidden="true">&amp;</span>
+      <span id="p2"></span>
+    </h1>
+    <p class="tagline" id="tagline"></p>
+    <div class="counter" id="counter" role="timer" aria-label="Time together"></div>
+    <a class="down" href="#story" aria-label="Scroll to our story">&#8964;</a>
+  </header>
+
+  <main>
+    <section class="section" id="story">
+      <h2 id="storyTitle"></h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section class="section" id="gallerySection">
+      <h2 id="galleryTitle"></h2>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="section reasons" id="reasonsSection">
+      <h2 id="reasonsTitle"></h2>
+      <p class="reason" id="reason" aria-live="polite"></p>
+      <button class="btn" id="reasonBtn" type="button"></button>
+    </section>
+
+    <section class="section" id="letterSection">
+      <h2 id="letterTitle"></h2>
+      <button class="envelope" id="envelope" type="button" aria-expanded="false" aria-controls="letterPaper">
+        <span class="flap"></span>
+        <span class="env-body"></span>
+        <span class="seal" aria-hidden="true">&#10084;</span>
+        <span class="env-label" id="letterButton"></span>
+      </button>
+      <div class="paper-wrap" id="letterPaper">
+        <article class="paper" id="paper"></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p id="footerText"></p></footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <form method="dialog"><button class="close" aria-label="Close photo">&times;</button></form>
+    <img id="lightboxImg" alt="">
+    <p id="lightboxCap"></p>
+  </dialog>
+
+  <button class="music" id="music" type="button" aria-pressed="false" aria-label="Play music" hidden>&#9835;</button>
+  <audio id="audio" loop></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
