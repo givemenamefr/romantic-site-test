@@ -1,4 +1,4 @@
-/* You shouldn't need to edit this file. Customize config.js instead. */
+
 (function () {
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => {
@@ -8,7 +8,7 @@
     return n;
   };
 
-  // ---------- Theme & basic text ----------
+ 
   const root = document.documentElement.style;
   Object.entries(SITE.theme || {}).forEach(([k, v]) => root.setProperty("--" + k, v));
   document.title = SITE.pageTitle || "Our Story";
@@ -24,7 +24,7 @@
   $("reasonBtn").textContent = SITE.reasonsButton;
   $("footerText").textContent = SITE.footer;
 
-  // ---------- Photo helper (shows a placeholder if the image is missing) ----------
+
   function photo(src, alt) {
     const wrap = el("div", "photo");
     if (!src) { wrap.classList.add("empty"); return wrap; }
@@ -37,7 +37,7 @@
     return wrap;
   }
 
-  // ---------- Live counter ----------
+
   const start = new Date(SITE.startDate);
   const units = [["y", "years"], ["m", "months"], ["d", "days"], ["h", "hours"], ["mi", "minutes"], ["s", "seconds"]];
   const counter = $("counter");
@@ -71,7 +71,7 @@
   tick();
   setInterval(tick, 1000);
 
-  // ---------- Story ----------
+ 
   (SITE.story || []).forEach((s) => {
     const li = el("li", "tl-item");
     const text = el("div", "tl-text");
@@ -81,7 +81,7 @@
     $("timeline").appendChild(li);
   });
 
-  // ---------- Gallery + lightbox ----------
+ 
   const box = $("lightbox");
   (SITE.gallery || []).forEach((g) => {
     const b = el("button", "shot");
@@ -97,7 +97,7 @@
   });
   box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
 
-  // ---------- Reasons (shuffled, never repeats until all are seen) ----------
+
   const reasons = SITE.reasons || [];
   let queue = [], last = "";
   const reasonEl = $("reason");
@@ -115,7 +115,7 @@
   last = reasons[0] || "";
   $("reasonBtn").addEventListener("click", nextReason);
 
-  // ---------- Letter ----------
+ 
   const L = SITE.letter || {};
   const paper = $("paper");
   paper.appendChild(el("p", "greeting", L.greeting));
